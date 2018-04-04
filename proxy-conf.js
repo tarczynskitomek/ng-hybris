@@ -6,8 +6,7 @@ const PROXY_CONFIG = {
     target: "https://hybris.e-point.pl",
     changeOrigin: true,
     secure: false,
-    auth: credentials,
-    logLevel: "debug"
+    auth: credentials
   }
 };
 
