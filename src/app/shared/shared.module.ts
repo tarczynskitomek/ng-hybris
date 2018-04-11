@@ -5,6 +5,7 @@ import { CategoryService } from "./_service/category.service";
 import { RouterModule } from "@angular/router/";
 import { CategoryComponent } from './category/category.component';
 import { ProductService } from "./_service/product.service";
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,7 @@ import { ProductService } from "./_service/product.service";
     CategoryService,
     ProductService
   ],
-  declarations: [NavigationComponent, CategoryComponent]
+  declarations: [NavigationComponent, CategoryComponent, ProductDetailsComponent]
 })
 export class SharedModule {
 }
