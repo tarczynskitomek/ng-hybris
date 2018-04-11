@@ -2,17 +2,24 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationComponent } from './navigation/navigation.component';
 import { CategoryService } from "./_service/category.service";
+import { RouterModule } from "@angular/router/";
+import { CategoryComponent } from './category/category.component';
+import { ProductService } from "./_service/product.service";
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
-    NavigationComponent
+    NavigationComponent,
+    CategoryComponent
   ],
   providers: [
-    CategoryService
+    CategoryService,
+    ProductService
   ],
-  declarations: [NavigationComponent]
+  declarations: [NavigationComponent, CategoryComponent]
 })
-export class SharedModule { }
+export class SharedModule {
+}

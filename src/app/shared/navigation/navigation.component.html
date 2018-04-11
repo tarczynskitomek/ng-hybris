@@ -2,8 +2,7 @@
 <ng-template #recursiveMenu let-categories>
   <div *ngFor="let category of categories">
     {{category.id}}
-    {{category.name}}
-    {{category.url}}
+    <a *ngIf="category.subcategories.length === 0" routerLink="/categories/{{category.id}}">{{category.name}}</a>
     <div *ngIf="category.subcategories.length > 0">
       <ng-container *ngTemplateOutlet="recursiveMenu; context:{ $implicit: category.subcategories }"></ng-container>
     </div>
